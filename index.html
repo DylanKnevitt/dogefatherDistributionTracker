@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dogefather Distribution Tracker</title>
+  <meta name="description" content="Dogefather Gains brah">
+  <meta name="author" content="Dylan Knevitt">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body class="h-100">
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <!-- Form -->
+                <form>
+                    <h1>Dogefather Distribution checker</h1>
+                    <p class="description">Check the amount of Dogefather tokens you have earned from the paperhands.</p>
+                    <!-- Input fields -->
+                    <div class="form-group">
+                        <label for="wallet">Wallet Address</label>
+                        <input id="wallet" class="form-control" type="text"/>                    
+                    </div>
+                    
+                    <input id="btnCalculate" class="form-control btn-primary" type="button" value="Pump it">
+                    
+                    <div class="form-group">
+                  
+                            <label for="txtWalletTotal">Wallet Total</label>
+                            <input id="txtWalletTotal" class="form-control" type="number" disabled/>
+                
+                            <label for="txtTokenIn">Tokens In</label>
+                            <input id="txtTokenIn" class="form-control" type="number" disabled/>
+ 
+                            <label for="txtTokenOut">Tokens Out</label>
+                            <input id="txtTokenOut" class="form-control"  type="number" disabled/>
+          
+                            <label for="txtDistributedTotal">Total Distributed</label>
+                            <input id="txtDistributedTotal" class="form-control " type="number" disabled/>
+            
+                    </div>
+               
+                </div>
+                    <!-- End input fields -->
+                </form>
+                <!-- Form end -->
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+<script>
+    $(document).ready(function(){
+    $('#btnCalculate').click(function(){
+        getTxns($("#wallet").val());
+});
+});
+</script>
+</html>
